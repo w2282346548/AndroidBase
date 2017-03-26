@@ -30,9 +30,11 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
 
     /**
      * Deprecated. Use {@link #findViewById(int)} instead for a better understanding.
+     * @param id
+     * @return T
      */
     @Deprecated
-    public <T extends View> T getView(int id) {
+    public <T extends View>T getView(int id) {
         return findViewById(id);
     }
 

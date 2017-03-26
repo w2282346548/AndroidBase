@@ -5,7 +5,10 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.dbsupport.DbOpenHelper;
+import com.android.dbsupport.test.AppDB;
 import com.android.support.ui.BaseView;
 import com.stateless.carexam.R;
 
@@ -34,6 +37,8 @@ public class AnswerItemView extends BaseView<AnswerItemView.AnswerItemModel> {
     protected void initView() {
         tvOption = $T(R.id.tv_option);
         tvContent = $T(R.id.tv_content);
+
+        setOnClickListener(this);
     }
 
     @Override
@@ -50,7 +55,9 @@ public class AnswerItemView extends BaseView<AnswerItemView.AnswerItemModel> {
 
     @Override
     public void onClick(View v) {
-
+        Toast.makeText(context, "sssss", Toast.LENGTH_SHORT).show();
+        DbOpenHelper openHelper = new AppDB().getOpenHelper(context);
+        openHelper.getReadableDatabase();
     }
 
    public static class AnswerItemModel{

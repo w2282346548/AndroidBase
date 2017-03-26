@@ -43,16 +43,16 @@ public abstract class BaseView<T> extends RelativeLayout implements View.OnClick
 
     protected abstract int getViewRes();
 
-    protected <T extends View> T $T(int id){
-        T v=(T)findViewById(id);
+    protected <V extends View> V $T(int id){
+        V v=(V)this.findViewById(id);
         return v;
     }
 
-    protected <T extends View> T $(int id){
-        T view=$T(id);
-        if (!(view instanceof AbsListView))
-            view.setOnClickListener(this);
-        return view;
+    protected <V extends View> V $(int id){
+        V v=$T(id);
+        if (!(v instanceof AbsListView))
+            v.setOnClickListener(this);
+        return v;
     }
 
 

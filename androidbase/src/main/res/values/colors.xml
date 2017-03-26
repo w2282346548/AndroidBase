@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_view_bg">#ffffffff</color>
+    <color name="title_text">#88000000</color>
+
+    <color name="item_common_bg">#ffffff</color>
+    <color name="item_press_bg">#dbdbdb</color>
+
+    <color name="line_color">#dbdbdb</color>
+
+
+</resources>

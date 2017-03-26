@@ -8,9 +8,18 @@
     tools:context="com.stateless.carexam.MainActivity"
     >
 
+    <com.android.support.widget.TitleView
+        android:id="@+id/v_title"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.android.support.widget.TitleView>
+
 
     <com.stateless.carexam.view.ExamView
         android:id="@+id/ev_exam"
+        android:layout_below="@+id/v_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></com.stateless.carexam.view.ExamView>
 
